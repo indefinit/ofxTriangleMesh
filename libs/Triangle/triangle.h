@@ -1,5 +1,5 @@
 
-#define VOID void
+//#define VOID void
 //#define REDUCED
 #define ANSI_DECLARATORS
 #define TRILIBRARY
@@ -291,7 +291,7 @@ struct triangulateio {
 #ifdef ANSI_DECLARATORS
 void triangulate(char *, struct triangulateio *, struct triangulateio *,
                  struct triangulateio *);
-void trifree(VOID *memptr);
+void trifree(void *memptr);
 #else /* not ANSI_DECLARATORS */
 void triangulate();
 void trifree();

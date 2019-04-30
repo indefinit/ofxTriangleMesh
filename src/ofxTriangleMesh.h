@@ -30,7 +30,7 @@
 
 typedef struct{
     
-    ofPoint pts[3];
+	glm::vec3 pts[3];
     int index[3];           // for the mesh, what points does this triangle relate to.
     ofColor randomColor;    // useful for debugging / drawing 
 
@@ -64,14 +64,14 @@ class ofxTriangleMesh {
 
     
         
-        ofPoint getTriangleCenter(ofPoint *tr);
-        bool isPointInsidePolygon(ofPoint *polygon,int N, ofPoint p);
+	glm::vec3 getTriangleCenter(glm::vec3 *tr);
+        bool isPointInsidePolygon(glm::vec3 *polygon,int N, glm::vec3 p);
 
         void draw();
         void clear();
 
         int nTriangles;
-        vector <ofPoint> outputPts;
+		vector <glm::vec3> outputPts;
         vector <meshTriangle> triangles;
         ofMesh triangulatedMesh;
     
